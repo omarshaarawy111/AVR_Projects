@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1531509123 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 5 codes\swap two numbers\swap.c
+
+1531508623 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 5 codes\swap two numbers\main.c
+	<stdio.h>
+	<stdlib.h>
+	"swap.h"
+
+1531509123 c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 5 codes\swap two numbers\swap.h
+

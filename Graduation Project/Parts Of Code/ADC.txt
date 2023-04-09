@@ -1,0 +1,52 @@
+/*void ADC_info_channel(void){
+	unsigned short read_val;
+	read_val=(ADCL);//right adjust
+	read_val|=(ADCH<<8);
+	setbit(ADCSRA,ADSC);//as we willnot make any interrupt we will set this bit at this function
+	while(isbitset(ADCSRA,ADIF));//stay in your position till ADIF become 1
+	setbit(ADCSRA,ADIF); // clear ADIF
+	switch(ADMUX){
+		case 0x40:
+		usartsendchar(0x0D);
+		usartsendchar('B');
+		usartsendchar('l');
+		usartsendchar('o');
+		usartsendchar('o');
+		usartsendchar('d');
+		usartsendchar(' ');
+		usartsendchar('p');
+		usartsendchar('r');
+		usartsendchar('e');
+		usartsendchar('s');
+		usartsendchar('s');
+		usartsendchar('u');
+		usartsendchar('r');
+		usartsendchar('e');
+		usartsendchar(' ');
+		usartsendchar('i');
+		usartsendchar('s');
+		usartsendchar(' ');
+		usartsendchar('=');
+		usartsendnum(Pressure_display(read_val));
+		ADMUX=0x41;
+		break;
+		case 0x41:
+		usartsendchar(0x0D);
+		usartsendchar('T');
+		usartsendchar('e');
+		usartsendchar('m');
+		usartsendchar('p');
+		usartsendchar(' ');
+		usartsendchar('i');
+		usartsendchar('s');
+		usartsendchar(' ');
+		usartsendchar('=');
+		usartsendnum(Temperature_display1(read_val));
+		ADMUX=0x40;
+		break;
+		default:
+		break;
+	}
+	
+		
+}*/

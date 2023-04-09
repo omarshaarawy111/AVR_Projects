@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1531087607 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\interface\c preprocessor directives (ifndef)\file.c
+
+1531088430 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\interface\c preprocessor directives (ifndef)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"file.h"
+	"file.h"
+
+1531165630 c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\interface\c preprocessor directives (ifndef)\file.h
+
+1531087607 source:e:\alamny interface\interface_part1_labs\c preprocessor directives (ifndef)\file.c
+
+1531088430 source:e:\alamny interface\interface_part1_labs\c preprocessor directives (ifndef)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"file.h"
+	"file.h"
+
+1532792019 e:\alamny interface\interface_part1_labs\c preprocessor directives (ifndef)\file.h
+
+1531087607 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 9 codes\c preprocessor directives (ifndef)\file.c
+
+1533372438 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 9 codes\c preprocessor directives (ifndef)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"file.h"
+	"file.h"
+
+1533400893 c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 9 codes\c preprocessor directives (ifndef)\file.h
+

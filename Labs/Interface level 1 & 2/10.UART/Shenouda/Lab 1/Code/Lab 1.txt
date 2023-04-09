@@ -1,0 +1,27 @@
+//interrupt between mc and virtual terminal
+//c/k = 8MHZ
+int main(void)
+{ 
+	//int
+	diosetport('B',0xFF);//if u even call dio or not ; u must write with hex
+	diosetport('D',0xFE);//if u even call dio or not ; u must write with hex
+	
+	UCSRB =(1<<TXEN)|(1<<RXEN)|(1<<RXCIE);//enable tran and rec and interrupt
+	UCSRC =(1<<UCSZ0)|(1<<UCSZ1);//enable 8bit data
+	UBRRH=415>>8;
+	UBRRL=(unsigned char )415;//for fosc=8MHZ and baudrate=1200
+	PORTB=0xff;
+	sei();//enable interrupt generally
+    while(1)
+    {
+      ;  //TODO:: Please write your application code 
+		
+    }
+}
+ISR(USART_RXC_vect){
+	//i will play on one side---->virtual terminal---->7seg
+	
+	PORTB=UDR;//sending thedata
+	while(!(UCSRA & (1<<UDRE)));//wait till the transmitter be empty
+	UDR=PORTB;
+}

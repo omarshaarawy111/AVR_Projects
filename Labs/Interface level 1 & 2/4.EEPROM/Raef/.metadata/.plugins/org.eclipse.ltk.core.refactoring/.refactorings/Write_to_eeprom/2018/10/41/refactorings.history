@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Write_to_eeprom/WriteToEEprom&apos; to &apos;WriteToEEprom.c&apos;" description="Rename resource &apos;WriteToEEprom&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WriteToEEprom" name="WriteToEEprom.c" stamp="1539325028978" updateReferences="true"/>
+</session>

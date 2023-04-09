@@ -1,0 +1,1 @@
+HAL/ACG.d HAL/ACG.o: ../HAL/ACG.c

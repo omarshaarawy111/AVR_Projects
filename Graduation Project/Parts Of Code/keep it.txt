@@ -1,0 +1,129 @@
+/*
+ * Omar_ATMEGA32.c
+ *
+ * Created: 27/09/2019 09:03:45 Õ
+ *  Author: Omar Sha'rawy
+ */ 
+#include<avr/io.h>
+#include<util/delay.h>
+#include<avr/interrupt.h>
+#include "led.h"
+#include "button.h"
+#include "std_macros.h"
+#include "dio.h"
+#define F_CPU 8000000UL // this is my cpu clock when im using serial communication (usart)
+int counter=0; //number of the steps
+int main(void)
+{  
+  //Vibrate_Set('C',0);	
+  // LCDinti8();	
+   //ledset('C',2);
+	usartint();
+	GICR |=(1<<INT0);
+	MCUCR|=(1<<ISC01);
+    sei();//enable interrupt generally
+	//ledset('D',7);
+	//ledset('D',6);
+	//ledset('C',1);
+	//buttonset('D',5);
+	//buttonset('D',2);
+	//buttonset('C',0);
+	ADCinti();
+	//LCDinti8();
+	//LCDsetpostion8(1,7,"Welcome");
+	//LCDsetpostion8(2,1,"select ur mode");
+    
+	while(1)
+	{
+		
+	/*int i;
+	int y=buttonread('D',5);
+	if (y==1){
+		LCDsetpostion8(1,1,"mode1");
+		LCDclearscreen8();	
+		for (;;){ 			   	     
+		LCDsetpostion8(1,1,"t=");
+		LCDsetpostion8(2,1,"BP=");
+		LCDsetpostion8(1,6,"step=");
+		ledturnoff('D',7);
+		ledturnoff('C',1);
+		ledturnon('D',6);
+	    ADCread_channel();
+		ledturnoff('C',2);	
+		
+		if (counter <10){
+			LCDmovecursor8(1,11);
+			LCDchar8((counter%10)+48);
+		_delay_ms(500);}
+		else if (counter<100){
+			LCDmovecursor8(1,11);
+			LCDchar8((counter/10)+48);
+		LCDchar8((counter%10)+48);}
+		} 				  
+	   }	*/
+      }    
+     }
+/*ISR(INT0_vect){
+	ledturnoff('D',6);
+	ledturnoff('D',7);
+	counter++;
+	ledturnon('C',1);
+	_delay_ms(100); 
+	PORTC &=~(1<<2);  
+}*/
+ISR(USART_RXC_vect){
+	
+//	int i;
+//	int o;
+//	char x;
+	usartsendchar(0x0d);
+	x=UDR;//sending thedata
+	usartsendchar(x);
+	//if (x=='a'){
+		/*LCDsetpostion8(1,1,"mode2");
+		LCDclearscreen8();
+		LCDsetpostion8(1,1,"t=");
+		LCDsetpostion8(2,1,"BP=");
+		LCDsetpostion8(1,6,"step=");*/
+		for(i=0;i<20;i++){
+			//ledturnoff('C',1);
+			//ledturnoff('D',6);
+			//ledturnon('D',7);		
+			ADC_info_channel();			
+			usartsendchar(0x0d);
+		}			
+			/*Steps_info(counter);
+			if (counter <10){
+				LCDmovecursor8(1,11);
+				LCDchar8((counter%10)+48);
+			_delay_ms(500);}
+			else if (counter<100){
+				LCDmovecursor8(1,11);
+				LCDchar8((counter/10)+48);
+			LCDchar8((counter%10)+48);}
+			}	*/		
+		   usartsendchar(0x0d);
+		   for(o=0;o<20;o++){
+		   usartsendchar('=');
+		}		
+	//}
+	/*else if (x=='b'){
+		LCDsetpostion8(1,1,"mode2");
+		LCDclearscreen8();
+		LCDsetpostion8(1,1,"t=");
+		LCDsetpostion8(2,1,"BP=");
+		LCDsetpostion8(1,6,"step=");
+		for(i=0;i<30;i++){
+			ledturnoff('C',1);
+			ledturnoff('D',6);
+			ledturnon('D',7);
+			ADC_info_channel();
+			usartsendchar(0x0d);	
+			Steps_info(counter);
+		}
+		usartsendchar(0x0d);
+		for(o=0;o<20;o++){
+			usartsendchar('=');
+		}
+	}*/
+}

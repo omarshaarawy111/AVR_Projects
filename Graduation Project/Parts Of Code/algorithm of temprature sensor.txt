@@ -1,0 +1,29 @@
+int temperatue;
+		temperatue=((2*(ADCread()*0.25))-1);
+		
+		if(temperatue<10)
+		{
+			LCDmovecursor8(1,13);
+			LCDchar8(30);
+			LCDchar8((temperatue%10)+48);
+			LCDchar8(0xDF);
+			LCDchar8(0x43);
+		}
+		else if( temperatue<100)
+		{
+			LCDmovecursor8(1,13);
+			LCDchar8((temperatue/10)+48);
+			LCDchar8((temperatue%10)+48);
+			LCDchar8(0XDF);
+			LCDchar8(0X43);
+			
+		}
+		else if (temperatue >100)
+		{
+			LCDmovecursor8(1,13);
+			
+			LCDchar8((temperatue/10)+48);
+			LCDchar8((temperatue%10)+48);
+			LCDchar8(0XDF);
+			LCDchar8(0X43);
+		}

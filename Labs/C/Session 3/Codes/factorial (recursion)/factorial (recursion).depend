@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1531234480 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 3 codes\factorial (recursion)\factorial.c
+
+1531310957 source:c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 3 codes\factorial (recursion)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"factorial.h"
+
+1531234480 c:\users\mohamed zaghlol\desktop\Úבדהל Ç‗ÇÏםדל\session 3 codes\factorial (recursion)\factorial.h
+

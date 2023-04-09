@@ -1,0 +1,19 @@
+int main(void)
+{ 
+	//RX
+	//int
+	unsigned char counter=0;
+	diosetport('B',0xFF);//if u even call dio or not ; u must write with hex
+	UCSRB =(1<<TXEN)|(1<<RXEN);//enable tran and rec and interrupt
+	UCSRC =(1<<UCSZ0)|(1<<UCSZ1);//enable 8bit data
+	UBRRL=51;//for fosc=8MHZ and baudrate=1200
+	
+	while(1)
+	{
+		
+		while (!(UCSRA & (1<<RXC)));
+		diowriteport('B',UDR);
+		
+	}
+	return (0);
+}

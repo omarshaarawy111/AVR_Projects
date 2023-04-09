@@ -1,0 +1,1 @@
+HAL/ECG.d HAL/ECG.o: ../HAL/ECG.c

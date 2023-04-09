@@ -1,0 +1,36 @@
+13:45:58 **** Incremental Build of configuration Debug for project Write_to_eeprom ****
+make all 
+Building file: ../EEProm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EEProm.d" -MT"EEProm.o" -c -o "EEProm.o" "../EEProm.c"
+Finished building: ../EEProm.c
+ 
+Building file: ../WriteToEEprom.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"WriteToEEprom.d" -MT"WriteToEEprom.o" -c -o "WriteToEEprom.o" "../WriteToEEprom.c"
+Finished building: ../WriteToEEprom.c
+ 
+Building target: Write_to_eeprom.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Write_to_eeprom.map -mmcu=atmega32 -o "Write_to_eeprom.elf"  ./EEProm.o ./WriteToEEprom.o   
+Finished building target: Write_to_eeprom.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Write_to_eeprom.elf  >"Write_to_eeprom.lss"
+Finished building: Write_to_eeprom.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Write_to_eeprom.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     402 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

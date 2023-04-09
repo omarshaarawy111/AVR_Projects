@@ -1,0 +1,30 @@
+/*
+ ============================================================================
+ Name        : check.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	//int y;
+	float x[5];
+	x[0]=0x32;
+	x[1]=0x33;
+	x[2]=0x34;
+	x[3]=0x35;
+	x[4]=0x36;
+
+for(int i = 2 ; i < 4; i++)
+{
+	x[i] = x[i] / (10^i-1);
+}
+		float total = x[1] +x[2]+x[3]+x[4];
+		printf("%f",total); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}

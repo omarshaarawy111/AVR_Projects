@@ -1,0 +1,23 @@
+/*
+ ============================================================================
+ Name        : ts.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+		char y[10]="raefss";
+		char *x ="embedded system";
+
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+		x[0] = 's';
+		y[0]= 's';
+		printf("%c",y[0]); /* prints !!!Hello World!!! */
+
+	return EXIT_SUCCESS;
+}
