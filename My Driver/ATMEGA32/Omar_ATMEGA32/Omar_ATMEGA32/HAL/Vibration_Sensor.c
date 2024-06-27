@@ -18,8 +18,10 @@ void Steps_info(unsigned int step_no){
 	usartsendchar('p');
 	usartsendchar('s');
 	usartsendchar(' ');
-	usartsendchar('i');
-	usartsendchar('s');
+	usartsendchar('a');
+	usartsendchar('r');
+	usartsendchar('e');
+	usartsendchar(' ');
 	usartsendchar('=');
 	usartsendnum(step_no);
 	
